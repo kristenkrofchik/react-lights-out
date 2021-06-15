@@ -73,17 +73,21 @@ function Board({ nrows=5, ncols=5, chanceLightStartsOn=0.5 }) {
       flipCell(y - 1, x, boardCopy);
       flipCell(y + 1, x, boardCopy);
 
+      //return board copy
       return boardCopy;
     });
   }
 
   // if the game is won, just show a winning msg & render nothing else
+  if (hasWon()) {
+    return (
+      <h1>
+      'You won!'
+      </h1>
+    )
+  }
 
-  // TODO
-
-  // make table board
-
-  // TODO
+  
 }
 
 export default Board;
