@@ -92,6 +92,7 @@ function Board({ nrows=5, ncols=5, chanceLightStartsOn=0.5 }) {
     let row = [];
     for(let x = 0; x <= ncols; x++) {
       let coord = `${y}-${x}`;
+      //push cells to rows of board with isLit true/false value and the flipCellsAroundCell function
       row.push(
         <Cell key={coord} isLit={board[y][x]} flipCellsAroundCell={() => flipCellsAround(coord)} />
       );
